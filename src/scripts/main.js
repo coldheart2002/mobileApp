@@ -39,14 +39,35 @@ for (let i = 0; i < LEFT_NAVBAR_CONTENTS.length; i++) {
   li.append(img);
 }
 
+//--CONTENTS
+const CONTENTS = [
+  { title: "HOME", definition: "DEFINITIO" },
+  { title: "HTML", definition: "DEFINITIO" },
+  { title: "CSS", definition: "DEFINITIO" },
+  { title: "JAVASCRIPT", definition: "DEFINITIO" },
+  { title: "SQL", definition: "DEFINITIO" },
+  { title: "PYTHON", definition: "DEFINITIO" },
+  { title: "JAVA", definition: "DEFINITIO" },
+  { title: "PHP", definition: "DEFINITIO" },
+  { title: "C++", definition: "DEFINITIO" },
+  { title: "C#", definition: "DEFINITIO" },
+  { title: "REACT", definition: "DEFINITIO" },
+];
+let title = document.querySelector(".title");
+let definition = document.querySelector(".definition");
+
 //--TOOGLE LEFT NAVBAR CONTENTS
 let leftNavbarContents = document.querySelectorAll(".leftNavbarContents");
 leftNavbarContents[0].classList.add("activeContent");
+title.innerHTML = CONTENTS[0].title;
 for (let i = 0; i < leftNavbarContents.length; i++) {
   leftNavbarContents[i].addEventListener("click", () => {
     for (let j = 0; j < leftNavbarContents.length; j++) {
       leftNavbarContents[j].classList.remove("activeContent");
     }
+    title.innerHTML = CONTENTS[i].title;
     leftNavbarContents[i].classList.add("activeContent");
   });
 }
+
+//--CONTENTS

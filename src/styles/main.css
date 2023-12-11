@@ -13,6 +13,9 @@ body .content {
   justify-content: start;
 }
 @media (max-width: 1000px) {
+  body .content .leftNavbarContents {
+    width: 20px;
+  }
   body .content .label {
     display: none;
   }
@@ -22,7 +25,7 @@ body .content {
 }
 body .content .leftNavbar {
   height: 100vh;
-  transition: 1s;
+  transition: 0.3s;
   margin: 0 5px;
 }
 body .content .leftNavbar .navbarContainer {
@@ -48,7 +51,6 @@ body .content .leftNavbar .navbarContainer .leftNavbarContents {
 }
 body .content .leftNavbar .navbarContainer .leftNavbarContents:hover {
   background-color: lightgray;
-  opacity: 0.7;
 }
 body .content .leftNavbar .navbarContainer .leftNavbarContents .label {
   font-size: 1.5rem;
@@ -64,10 +66,20 @@ body .content .leftNavbar .navbarContainer .leftNavbarContents img {
   height: 20px;
 }
 body .content .content {
-  border: solid 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
   flex: 1;
   height: 100vh;
+  position: relative;
   border: solid 1px;
-  transition: 1s;
-  background-color: red;
+  transition: 0.3s;
+  min-width: 500px;
+}
+body .content .content .title {
+  padding: 1px;
+  font-size: 3rem;
+  margin-top: 20px;
+  font-weight: 600;
 }/*# sourceMappingURL=main.css.map */

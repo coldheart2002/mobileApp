@@ -15,8 +15,9 @@ body {
   .content {
     @include flex(row, center, start);
     @media (max-width: 1000px) {
-      // .leftNavbarContents {
-      // }
+      .leftNavbarContents {
+        width: 20px;
+      }
       .label {
         display: none;
       }
@@ -26,7 +27,7 @@ body {
     }
     .leftNavbar {
       height: 100vh;
-      transition: 1s;
+      transition: 0.3s;
       // width: 200px;
       margin: 0 5px;
       .navbarContainer {
@@ -47,7 +48,6 @@ body {
           transition: 0.3s;
           &:hover {
             background-color: lightgray;
-            opacity: 0.7;
           }
           .label {
             font-size: 1.5rem;
@@ -66,13 +66,19 @@ body {
       }
     }
     .content {
-      border: solid 1px;
+      @include flex(row, start, center);
       flex: 1;
       height: 100vh;
-      // max-width: 800px;
+      position: relative;
       border: solid 1px;
-      transition: 1s;
-      background-color: red;
+      transition: 0.3s;
+      min-width: 500px;
+      .title {
+        padding: 1px;
+        font-size: 3rem;
+        margin-top: 20px;
+        font-weight: 600;
+      }
     }
   }
 }
