@@ -42,7 +42,11 @@ for (let i = 0; i < LEFT_NAVBAR_CONTENTS.length; i++) {
 //--CONTENTS
 const CONTENTS = [
   { title: "HOME", definition: "DEFINITIO" },
-  { title: "HTML", definition: "DEFINITIO" },
+  {
+    title: "HTML",
+    definition:
+      "HTML (Hypertext Markup Language) is a standardized system used to tag text files to create web pages and define their layout and elements, including hyperlinks, graphics, and text styles, which can be further enhanced with CSS and JavaScript for aesthetics and interactivity.",
+  },
   { title: "CSS", definition: "DEFINITIO" },
   { title: "JAVASCRIPT", definition: "DEFINITIO" },
   { title: "SQL", definition: "DEFINITIO" },
@@ -58,15 +62,17 @@ let definition = document.querySelector(".definition");
 
 //--TOOGLE LEFT NAVBAR CONTENTS
 let leftNavbarContents = document.querySelectorAll(".leftNavbarContents");
-leftNavbarContents[0].classList.add("activeContent");
-title.innerHTML = CONTENTS[0].title;
+leftNavbarContents[1].classList.add("activeContent");
+definition.innerText = CONTENTS[1].definition;
+title.innerHTML = CONTENTS[1].title;
 for (let i = 0; i < leftNavbarContents.length; i++) {
   leftNavbarContents[i].addEventListener("click", () => {
     for (let j = 0; j < leftNavbarContents.length; j++) {
       leftNavbarContents[j].classList.remove("activeContent");
     }
-    title.innerHTML = CONTENTS[i].title;
     leftNavbarContents[i].classList.add("activeContent");
+    title.innerText = CONTENTS[i].title;
+    definition.innerText = CONTENTS[i].definition;
   });
 }
 

@@ -66,20 +66,28 @@ body .content .leftNavbar .navbarContainer .leftNavbarContents img {
   height: 20px;
 }
 body .content .content {
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: center;
-  flex: 1;
-  height: 100vh;
   position: relative;
+  height: 100vh;
   border: solid 1px;
   transition: 0.3s;
   min-width: 500px;
+  width: 100%;
+  padding: 20px;
 }
-body .content .content .title {
-  padding: 1px;
+body .content .content .header {
+  top: 20px;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  text-align: justify;
+}
+body .content .content .header .title {
   font-size: 3rem;
-  margin-top: 20px;
   font-weight: 600;
+  text-align: center;
+}
+body .content .content .header .definition {
+  min-width: 300px;
+  border: solid 1px;
+  line-height: 1.2;
 }/*# sourceMappingURL=main.css.map */
