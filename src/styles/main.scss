@@ -1,0 +1,78 @@
+@mixin flex($d, $a, $j) {
+  display: flex;
+  flex-direction: $d;
+  align-items: $a;
+  justify-content: $j;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: arial;
+}
+body {
+  .content {
+    @include flex(row, center, start);
+    @media (max-width: 1000px) {
+      // .leftNavbarContents {
+      // }
+      .label {
+        display: none;
+      }
+      .leftNavbar {
+        width: 50px;
+      }
+    }
+    .leftNavbar {
+      height: 100vh;
+      transition: 1s;
+      // width: 200px;
+      margin: 0 5px;
+      .navbarContainer {
+        padding: 7px 0;
+        .activeContent {
+          background-color: lightgray;
+        }
+        .leftNavbarContents {
+          @include flex(row, center, start);
+          border: solid 1px;
+          height: 45px;
+          border-radius: 5px;
+          margin-bottom: 5px;
+          position: relative;
+          min-width: 45px;
+          cursor: pointer;
+          list-style: none;
+          transition: 0.3s;
+          &:hover {
+            background-color: lightgray;
+            opacity: 0.7;
+          }
+          .label {
+            font-size: 1.5rem;
+            padding-left: 40px;
+            padding-right: 10px;
+          }
+          img {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            aspect-ratio: 1/1;
+            height: 20px;
+          }
+        }
+      }
+    }
+    .content {
+      border: solid 1px;
+      flex: 1;
+      height: 100vh;
+      // max-width: 800px;
+      border: solid 1px;
+      transition: 1s;
+      background-color: red;
+    }
+  }
+}
